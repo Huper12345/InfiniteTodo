@@ -1,0 +1,35 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./header.scss";
+
+body {
+    font-size: 15px;
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    color: $lightblack;
+    margin: 0;
+
+    overflow-x: hidden;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
