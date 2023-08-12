@@ -1,0 +1,50 @@
+
+
+.task-container {
+    display: flex;
+}
+
+.task-item {
+    background-color: $softblue;
+    padding: 30px 20px;
+    width: 30%;
+    position: relative;
+    margin: 5px 10px;
+}
+
+.task-text {
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: $white;
+}
+
+.task-priority {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin: 20px 0 0 20px ;
+}
+
+.priority-item {
+    width: 15px;
+    height: 15px;
+    background-color: $lightgray;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.priority-item.hard {
+    background-color: $lightred;
+}
+
+.priority-item.middle {
+    background-color: $orange;
+}
+
+.priority-item.light {
+    background-color: $softblue;
+}
+

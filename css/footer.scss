@@ -1,0 +1,17 @@
+
+
+.footer {
+    background: $blue-blue;
+    background: linear-gradient(90deg, $blue-blue 31%, $lightblue 89%);
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}

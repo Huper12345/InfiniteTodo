@@ -1,0 +1,47 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.button-add {
+    border: 0;
+}
+
+
+.button-add {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $softblue;
+    border-radius: 0.6em;
+    color: $softblue;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'DMsansBold';
+    font-style: bold;
+    font-weight: 700;
+  
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }
+  }
+  
+  .button-add {
+    border-color: $softblue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px $softblue inset, 0 0 0 0 $softblue;
+    transition: 150ms ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 10px 0 $softblue inset, 0 0 10px 4px $softblue;
+    }
+  }
