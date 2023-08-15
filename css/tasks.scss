@@ -2,6 +2,8 @@
 
 .task-container {
     display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
 }
 
 .task-item {
@@ -10,6 +12,56 @@
     width: 30%;
     position: relative;
     margin: 5px 10px;
+    cursor: pointer;
+}
+
+.task-item:hover .task-delete-button {
+    opacity: 1;
+}
+
+.task-button-container {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+
+.task-delete-button {
+    font-size: 0;
+    background-color: inherit;
+    position: relative;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.task-delete-button:hover::after {
+background-color: $orange;
+transition: 0.3s;
+}
+
+.task-delete-button:hover::before {
+    background-color:$orange;
+    transition: 0.3s;
+}
+.task-delete-button::after {
+content: "";
+width: 20px;
+height: 3px;
+background-color: $lightred;
+position: absolute;
+transform: rotate(-45deg);
+}
+
+.task-delete-button::before {
+content: "";
+width: 20px;
+height: 3px;
+background-color: $lightred;
+position: absolute;
+transform: rotate(45deg);
+
 }
 
 .task-text {
@@ -46,5 +98,26 @@
 
 .priority-item.light {
     background-color: $softblue;
+}
+
+// Sucsesfully
+
+// .task-sucsefully {
+ 
+// }
+
+.task-sucsefully-title {
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: $lightgray;
+    width: 100%;
+   text-align: center;
+}
+
+.task-item.sucsesfully {
+    opacity: 0.9;
+    background-color: $lightgray;
 }
 
