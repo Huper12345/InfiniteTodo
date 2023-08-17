@@ -1,0 +1,134 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.task-select-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.task-select-inner {
+    background-color: $softblue;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.task-select-text {
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    color: $white;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.task-select-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.task-text-input {
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    color: $white;
+    font-size: 20px;
+    outline: 0;
+    max-width: 150px;
+    background-color: inherit;
+    border: 0;
+    text-align: center;
+}
+
+.task-text-input::-webkit-input-placeholder {
+    font-family: 'DMsans';
+    font-style: normal;
+    font-weight: 400;
+    color: $white;
+    font-size: 19px;
+}
+
+.task-input-container.priority {
+    margin-right: 12px;
+}
+
+/* Input radio style */
+
+.task-input-priority[type="radio"]:checked, 
+.task-input-priority[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+ 
+.task-input-priority[type="radio"]:checked + label, 
+.task-input-priority[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+    margin-left: 13px;
+}
+
+/* Colors Radio */
+.task-input-priority[type="radio"]:checked + label:before, 
+.task-input-priority[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: $lightblue;
+}
+
+
+.task-input-priority.yellow[type="radio"]:checked + label:before, 
+.task-input-priority.yellow[type="radio"]:not(:checked) + label:before {
+    background-color: $orange; 
+}
+
+.task-input-priority.red[type="radio"]:checked + label:before, 
+.task-input-priority.red[type="radio"]:not(:checked) + label:before {
+    background-color: $lightred; 
+}
+
+/* Colors Radio */
+
+.task-input-priority[type="radio"]:checked + label:before, 
+.task-input-priority[type="radio"]:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+.task-input-priority[type="radio"]:checked + label:after, 
+.task-input-priority[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+
+.task-input-priority[type="radio"]:checked + label:after, 
+.task-input-priority[type="radio"]:not(:checked) + label:after {
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 3.5px solid $white;
+}
+
+.task-input-priority[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.task-input-priority[type="radio"]:checked + label:after {
+    opacity: 1;
+}

@@ -4,6 +4,7 @@
 @import "./footer.scss";
 @import "./buttons.scss";
 @import "./tasks.scss";
+@import "./addtask.scss";
 
 body {
     font-size: 15px;
@@ -41,3 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 // .main-wrapper {
 //     position: relative;
 // }
+
+.main {
+    position: relative;
+}
