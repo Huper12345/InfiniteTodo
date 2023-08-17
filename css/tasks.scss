@@ -1,4 +1,5 @@
-
+@import "./colors.scss";
+@import "./fonts.scss";
 
 .task-container {
     display: flex;
@@ -13,6 +14,31 @@
     position: relative;
     margin: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+.task-item::before {
+    content: "";
+    width: 4px;
+    height: 70%;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    background-color: inherit;
+}
+
+.task-item.red.task-item::before {
+    background-color: $lightred;
+}
+
+.task-item.orange.task-item::before {
+    background-color: $orange;
+}
+
+.task-item.blue.task-item::before {
+    background-color: $lightblue;
 }
 
 .task-item:hover .task-delete-button {
@@ -36,13 +62,13 @@
     opacity: 0;
 }
 
-.task-delete-button:hover::after {
-background-color: $orange;
+.task-button-container:hover .task-delete-button::after {
+background-color: $lightblue;
 transition: 0.3s;
 }
 
-.task-delete-button:hover::before {
-    background-color:$orange;
+.task-button-container:hover .task-delete-button::before {
+    background-color:$lightblue;
     transition: 0.3s;
 }
 .task-delete-button::after {
@@ -70,34 +96,26 @@ transform: rotate(45deg);
     font-weight: 400;
     font-size: 25px;
     color: $white;
+    padding: 0px 6px 10px 6px;
+ 
 }
 
 .task-priority {
     display: flex;
     position: absolute;
     bottom: 10px;
-    left: 0;
+    right: 10px;
     margin: 20px 0 0 20px ;
 }
 
-.priority-item {
-    width: 15px;
-    height: 15px;
-    background-color: $lightgray;
-    margin-right: 10px;
-    border-radius: 10px;
+.energyCost {
+    fill: $lightgray;
+    width: 30px;
+    height: 20px;
 }
 
-.priority-item.hard {
-    background-color: $lightred;
-}
-
-.priority-item.middle {
-    background-color: $orange;
-}
-
-.priority-item.light {
-    background-color: $softblue;
+.energyCost.active {
+    fill: $lightblue;
 }
 
 // Sucsesfully
@@ -117,7 +135,13 @@ transform: rotate(45deg);
 }
 
 .task-item.sucsesfully {
+    opacity: 0.5;
+    background-color: $middlegray;
+    transition: 0.3s;
+}
+
+.task-item.sucsesfully:hover {
     opacity: 0.9;
-    background-color: $lightgray;
+    transition: 0.3s;
 }
 

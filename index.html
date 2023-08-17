@@ -35,6 +35,9 @@
         c6.941,0.002,13.479,1.403,19.462,3.934c8.968,3.795,16.665,10.183,22.079,18.196c2.708,4.005,4.845,8.406,6.306,13.094
         c1.461,4.69,2.251,9.666,2.251,14.873C406.293,262.942,404.892,269.48,402.36,275.464z"/>
     </symbol>
+
+    <symbol id="energyCost" viewBox="0 0 88.408 88.408">
+        <polygon points="67.41,0 34.256,0 20.999,47.732 34.283,47.732 22.988,88.408 26.967,88.408 65.418,40.674 45.939,40.674"/>
 </svg>
 <!-- Svg sprites -->
 
@@ -51,19 +54,32 @@
                 </div>
             </div>
         </header>
-        <main>
+
+        <main class="main">
             <div class="container">
                 <div class="task-container">
 
-                    <div class="task-item">
+                    <div class="task-item red">
                         <div class="task-button-container">
                             <button class="task-delete-button">1</button>
                         </div>
-                        <div class="task-text">Задача №1</div>
+                        <div class="task-text">Задача 1</div>
                             <div class="task-priority">
-                                <div class="priority-item hard"></div>
-                                <div class="priority-item hard"></div>
-                                <div class="priority-item"></div>
+                                <div class="priority-item">
+                                    <svg class="energyCost active">
+                                        <use  xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
+                                <div class="priority-item">
+                                    <svg class="energyCost active">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
+                                <div class="priority-item">
+                                    <svg class="energyCost">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
                             </div>
                     </div><!--task--item-->
 
@@ -72,23 +88,62 @@
 
                 <div class="task-sucsefully">
                     <h2 class="task-sucsefully-title">Выполнено</h2>
-                    <div class="task-container sucsesfully">
 
-                        <div class="task-item sucsesfully">
+                    <div class="task-item orange sucsesfully">
                         <div class="task-button-container">
                             <button class="task-delete-button">1</button>
                         </div>
-                        <div class="task-text">Задача №1</div>
+                        <div class="task-text">Задача 1</div>
                             <div class="task-priority">
-                                <div class="priority-item hard"></div>
-                                <div class="priority-item hard"></div>
-                                <div class="priority-item"></div>
+                                <div class="priority-item">
+                                    <svg class="energyCost active">
+                                        <use  xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
+                                <div class="priority-item">
+                                    <svg class="energyCost active">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
+                                <div class="priority-item">
+                                    <svg class="energyCost">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                                </div> <!--priority-item-->
                             </div>
                     </div><!--task--item-->
 
                     </div><!--task--container sucsesfully-->
                 </div>
             </div> <!--container-->
+
+            <div class="task-select-wrapper">
+                <div class="container">
+                    <form class="task-select-inner">
+                        <div class="task-select-item">
+                            <div class="task-select-text">Имя задачи</div>
+                            <input placeholder="Задача 1" class="task-text-input" type="text" required>
+                        </div><!--task-select-item-->
+                        
+                        <div class="task-select-item">
+                            <div class="task-select-text">Приоритет</div>
+                            <div class="task-input-container priority">
+
+                                    <input class="task-input-priority" type="radio" name="radioColor" id="taskInputRadioblue" value="blue">
+                                    <label for="taskInputRadioblue"></label>
+                          
+                                    <input class="task-input-priority yellow" type="radio" name="radioColor" id="taskInputRadioYellow" value="yellow">
+                                    <label for="taskInputRadioYellow"></label>
+              
+                                    <input class="task-input-priority red" type="radio" name="radioColor" id="taskInputRadioRed" value="red">
+                                    <label for="taskInputRadioRed"></label>
+
+                            </div>
+                        </div><!--task-select-item-->
+
+                    </form><!--task-selectinner-->
+                </div><!--container-->
+            </div> <!--task-select-wrapper-->
         </main>
         <footer class="footer">
             <div class="container">
