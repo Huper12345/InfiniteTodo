@@ -56,69 +56,71 @@
         </header>
 
         <main class="main">
-            <div class="container">
-                <div class="task-container">
-
-                    <div class="task-item red">
-                        <div class="task-button-container">
-                            <button class="task-delete-button">1</button>
-                        </div>
-                        <div class="task-text">Задача 1</div>
-                            <div class="task-priority">
-                                <div class="priority-item">
-                                    <svg class="energyCost active">
-                                        <use  xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                                <div class="priority-item">
-                                    <svg class="energyCost active">
-                                        <use xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                                <div class="priority-item">
-                                    <svg class="energyCost">
-                                        <use xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                            </div>
-                    </div><!--task--item-->
-
-    
-                </div> <!--task--container-->
-
-                <div class="task-sucsefully">
-                    <h2 class="task-sucsefully-title">Выполнено</h2>
-
-                    <div class="task-item orange sucsesfully">
-                        <div class="task-button-container">
-                            <button class="task-delete-button">1</button>
-                        </div>
-                        <div class="task-text">Задача 1</div>
-                            <div class="task-priority">
-                                <div class="priority-item">
-                                    <svg class="energyCost active">
-                                        <use  xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                                <div class="priority-item">
-                                    <svg class="energyCost active">
-                                        <use xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                                <div class="priority-item">
-                                    <svg class="energyCost">
-                                        <use xlink:href="#energyCost"></use>
-                                    </svg>
-                                </div> <!--priority-item-->
-                            </div>
-                    </div><!--task--item-->
-
-                    </div><!--task--container sucsesfully-->
-                </div>
-            </div> <!--container-->
-
-            <div class="task-select-wrapper">
+            <div class="tasks-page-wrapper show" id="tasksPageWrapper">
                 <div class="container">
+                    <div class="task-container">
+
+                        <div class="task-item red">
+                            <div class="task-button-container">
+                                <button class="task-delete-button">1</button>
+                            </div>
+                            <div class="task-text">Задача 1</div>
+                                <div class="task-priority">
+                                    <div class="priority-item">
+                                        <svg class="energyCost active">
+                                            <use  xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                    <div class="priority-item">
+                                        <svg class="energyCost active">
+                                            <use xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                    <div class="priority-item">
+                                        <svg class="energyCost">
+                                            <use xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                </div>
+                        </div><!--task--item-->
+
+        
+                    </div> <!--task--container-->
+
+                    <div class="task-sucsefully">
+                        <h2 class="task-sucsefully-title">Выполнено</h2>
+
+                        <div class="task-item orange sucsesfully">
+                            <div class="task-button-container">
+                                <button class="task-delete-button">1</button>
+                            </div>
+                            <div class="task-text">Задача 1</div>
+                                <div class="task-priority">
+                                    <div class="priority-item">
+                                        <svg class="energyCost active">
+                                            <use  xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                    <div class="priority-item">
+                                        <svg class="energyCost active">
+                                            <use xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                    <div class="priority-item">
+                                        <svg class="energyCost">
+                                            <use xlink:href="#energyCost"></use>
+                                        </svg>
+                                    </div> <!--priority-item-->
+                                </div>
+                        </div><!--task--item-->
+
+                        </div><!--task--container sucsesfully-->
+                    </div><!--container-->
+                </div> <!--tasks-page-wrapper-->
+
+            <div class="task-select-wrapper hide" id="taskSelectWrapper">
+                <div class="container">
+                    <button class="back-Button" id="backButton">Назад</button>
                     <form class="task-select-inner">
                         <div class="task-select-item">
                             <div class="task-select-text">Имя задачи</div>
@@ -141,6 +143,27 @@
                             </div>
                         </div><!--task-select-item-->
 
+                        <div class="task-select-item">
+                            <div class="task-select-text">Приоритет</div>
+                            <div class="task-input-container priority">
+                                <div class="energy-cost-inner">
+                                    <svg class="energyCost energy-cost-select" id="taskTimeLow">
+                                        <use  xlink:href="#energyCost"></use>
+                                    </svg>
+                            
+                        
+                                    <svg class="energyCost energy-cost-select" id="taskTimeMiddle">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                            
+                                    <svg class="energyCost energy-cost-select" id="taskTimeHigh">
+                                        <use xlink:href="#energyCost"></use>
+                                    </svg>
+                                 </div>
+
+                         
+                        </div><!--task-select-item-->
+
                     </form><!--task-selectinner-->
                 </div><!--container-->
             </div> <!--task-select-wrapper-->
@@ -148,11 +171,12 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-inner">
-                    <button class="button-add">Добавить</button>
+                    <button class="button-add" id="addTask">Добавить</button>
+                    <button class="button-add hide" id="inputTask">Принять</button>
                 </div>
             </div>
         </footer>
     
-<script src="./js/app.js"></script>
+<script type="module" src="./js/app.js"></script>
 </body>
 </html>

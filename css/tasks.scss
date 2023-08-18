@@ -1,6 +1,10 @@
 @import "./colors.scss";
 @import "./fonts.scss";
 
+.tasks-page-wrapper {
+    display: none;
+}
+
 .task-container {
     display: flex;
     flex-wrap: wrap;
@@ -145,3 +149,10 @@ transform: rotate(45deg);
     transition: 0.3s;
 }
 
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
